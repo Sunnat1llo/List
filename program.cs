@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using List.classes;
 
-  
+
 
 
 
@@ -13,7 +13,7 @@ using List.classes;
 // {
 //     public string Familiya { get; set; }
 //     public string Ism { get; set; }
-//     public int Baho { get; set; }
+//     public int Baho { get; set; }  
 // }
 
 // class Program
@@ -97,34 +97,19 @@ using List.classes;
 
 class Program
 {
-   
-    static void Main()   
+
+    static void Main()
     {
-      Boks boks = new Boks();
-    boks.TableOfMen();
-    boks.LowWeightOfMen();
+        Boks boks = new Boks();
+        boks.TableOfMen();
+        boks.LowWeightOfMen();
+        boks.MediumWeightOfMen();
+        boks.HighWeightOfMen();
 
 
 
 
 
-        var Mlist = boks.boks.Where(q => q.Weight > 50 && q.Weight < 76);
-        System.Console.WriteLine("50-76 kg oralig'idagi vazn toifadagilar");
-        foreach (var Mportion in Mlist)
-        {
 
-            System.Console.WriteLine($"{Mportion.FirstName} {Mportion.LastName} Yosh: {Mportion.Age}, Vazn: {Mportion.Weight}");
-
-        }
-
-        System.Console.WriteLine();
-
-        var Hlist = boks.boks.Where(n => n.Weight > 76);
-
-        System.Console.WriteLine("yuqori vazn toifadagilar");
-        foreach (var Hportion in Hlist)
-        {
-            System.Console.WriteLine($"{Hportion.FirstName} {Hportion.LastName}, Yosh: {Hportion.Age} Vazn: {Hportion.Weight}");
-        }
     }
 }
